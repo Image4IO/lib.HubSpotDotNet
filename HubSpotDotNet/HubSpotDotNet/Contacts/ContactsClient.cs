@@ -7,7 +7,7 @@ namespace HubSpotDotNet.Contacts
 {
     public class ContactsClient : HubSpotBaseClient, IContactsClient
     {
-        public ContactsClient(HttpClient client) : base(client)
+        public ContactsClient(HttpClient client, string apiKey) : base(client, apiKey)
         {
         }
 
@@ -15,5 +15,6 @@ namespace HubSpotDotNet.Contacts
         {
             var a = _client.BaseAddress;
         }
+        
     }
 }
