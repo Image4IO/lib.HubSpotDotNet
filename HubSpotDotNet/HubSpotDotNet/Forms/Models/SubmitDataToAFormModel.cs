@@ -13,10 +13,10 @@ namespace HubSpotDotNet.Forms.Models
         public List<Field> Fields { get; set; }
 
         [JsonProperty(PropertyName = "context")]
-        public ContextClass Context { get; set; }
+        public Context Context { get; set; }
 
         [JsonProperty(PropertyName = "legalConsentOptions")]
-        public LegalConsentOptionsClass LegalConsentOptions { get; set; }
+        public LegalConsentOptions LegalConsentOptions { get; set; }
         public class Field
         {
             [JsonProperty(PropertyName = "name")]
@@ -26,47 +26,49 @@ namespace HubSpotDotNet.Forms.Models
             public string Value { get; set; }
         }
 
-        public class ContextClass
-        {
-            [JsonProperty(PropertyName = "hutk")]
-            public string Hutk { get; set; }
+        
+    }
 
-            [JsonProperty(PropertyName = "pageUri")]
-            public string PageUri { get; set; }
+    public class Context
+    {
+        [JsonProperty(PropertyName = "hutk")]
+        public string Hutk { get; set; }
 
-            [JsonProperty(PropertyName = "pageName")]
-            public string PageName { get; set; }
-        }
+        [JsonProperty(PropertyName = "pageUri")]
+        public string PageUri { get; set; }
 
-        public class Communication
-        {
-            [JsonProperty(PropertyName = "value")]
-            public bool Value { get; set; }
+        [JsonProperty(PropertyName = "pageName")]
+        public string PageName { get; set; }
+    }
 
-            [JsonProperty(PropertyName = "subscriptionTypeId")]
-            public int SubscriptionTypeId { get; set; }
+    public class Communication
+    {
+        [JsonProperty(PropertyName = "value")]
+        public bool Value { get; set; }
 
-            [JsonProperty(PropertyName = "text")]
-            public string Text { get; set; }
-        }
+        [JsonProperty(PropertyName = "subscriptionTypeId")]
+        public int SubscriptionTypeId { get; set; }
 
-        public class Consent
-        {
-            [JsonProperty(PropertyName = "consentToProcess")]
-            public bool ConsentToProcess { get; set; }
+        [JsonProperty(PropertyName = "text")]
+        public string Text { get; set; }
+    }
 
-            [JsonProperty(PropertyName = "text")]
-            public string Text { get; set; }
+    public class Consent
+    {
+        [JsonProperty(PropertyName = "consentToProcess")]
+        public bool ConsentToProcess { get; set; }
 
-            [JsonProperty(PropertyName = "communications")]
-            public List<Communication> Communications { get; set; }
-        }
+        [JsonProperty(PropertyName = "text")]
+        public string Text { get; set; }
 
-        public class LegalConsentOptionsClass
-        {
+        [JsonProperty(PropertyName = "communications")]
+        public List<Communication> Communications { get; set; }
+    }
 
-            [JsonProperty(PropertyName = "consent")]
-            public Consent Consent { get; set; }
-        }
+    public class LegalConsentOptions
+    {
+
+        [JsonProperty(PropertyName = "consent")]
+        public Consent Consent { get; set; }
     }
 }

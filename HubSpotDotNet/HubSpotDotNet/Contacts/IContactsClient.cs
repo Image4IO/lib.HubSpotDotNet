@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using HubSpotDotNet.Contacts.Models;
+using System.Threading.Tasks;
 
 namespace HubSpotDotNet.Contacts
 {
     public interface IContactsClient : IHubSpotBaseClient
     {
-        void Tets();
+        bool CreateANewContact(CreateANewContactRequestModel model);
+        Task<bool> CreateANewContactAsync(CreateANewContactRequestModel model);
     }
 }

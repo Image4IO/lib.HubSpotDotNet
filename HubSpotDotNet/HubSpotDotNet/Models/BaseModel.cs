@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace HubSpotDotNet.Models
 {
@@ -14,31 +15,40 @@ namespace HubSpotDotNet.Models
         public string CorrelationId { get; set; }
 
         [JsonProperty(PropertyName = "engagement")]
-        public EngagementClass Engagement { get; set; }
-
+        public Engagement Engagement { get; set; }
 
         [JsonProperty(PropertyName = "requestId")]
         public string RequestId { get; set; }
 
+        [JsonProperty(PropertyName = "validationResults")]
+        public List<ValidationResult> ValidationResults { get; set; }
 
-        public class EngagementClass
-        {
 
-            [JsonProperty(PropertyName = "__invalid_name__shhkey-v1")]
-            public string InvalidNameSHHKeyV1 { get; set; }
+    }
+    public class ValidationResult
+    {
+        public bool isValid { get; set; }
+        public string message { get; set; }
+        public string error { get; set; }
+        public string name { get; set; }
+    }
+    public class Engagement
+    {
 
-            [JsonProperty(PropertyName = "hapikey")]
-            public string Hapikey { get; set; }
+        [JsonProperty(PropertyName = "__invalid_name__shhkey-v1")]
+        public string InvalidNameSHHKeyV1 { get; set; }
 
-            [JsonProperty(PropertyName = "__invalid_name__oauth-token")]
-            public string InvalidNameOAuthToken { get; set; }
+        [JsonProperty(PropertyName = "hapikey")]
+        public string Hapikey { get; set; }
 
-            [JsonProperty(PropertyName = "__invalid_name__internal-cookie")]
-            public string InvalidNameInternalCookie { get; set; }
+        [JsonProperty(PropertyName = "__invalid_name__oauth-token")]
+        public string InvalidNameOAuthToken { get; set; }
 
-            [JsonProperty(PropertyName = "__invalid_name__app-cookie")]
-            public string InvalidNameAppCookie { get; set; }
+        [JsonProperty(PropertyName = "__invalid_name__internal-cookie")]
+        public string InvalidNameInternalCookie { get; set; }
 
-        }
+        [JsonProperty(PropertyName = "__invalid_name__app-cookie")]
+        public string InvalidNameAppCookie { get; set; }
+
     }
 }

@@ -6,7 +6,7 @@ namespace HubSpotDotNet.Test
     [TestClass]
     public class UnitTestContacts
     {
-        IHubSpot hs;
+        HubSpot hs;
 
         public UnitTestContacts()
         {
@@ -15,11 +15,31 @@ namespace HubSpotDotNet.Test
         }
 
         [TestMethod]
-        public void GetAccountDetailsTest()
+        public void CreateANewContactTest()
         {
-            var response = hs.GetAccountDetails();
+            var request = new Contacts.Models.CreateANewContactRequestModel
+            {
+                Email = "test2@image4.io",
+                FirstName = "Test"
+            };
 
-            Assert.AreNotEqual(0, response.PortalId);
+            request.OtherProperties.Add(new Contacts.Models.Property
+            {
+                PropertyName = "hs_analytics_source",
+                Value = "OFFLINE"
+            });
+
+            request.OtherProperties.Add(new Contacts.Models.Property
+            {
+                PropertyName = "reference",
+                Value = "Azure"
+            });
+
+
+            var response = hs.Contacts.CreateANewContact(request);
+
+            Assert.IsTrue(response);
+
         }
     }
 }
