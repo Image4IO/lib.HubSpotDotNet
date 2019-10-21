@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace HubSpotDotNet
@@ -20,7 +19,8 @@ namespace HubSpotDotNet
 
         public HubSpot()
         {
-            Constructor("");
+            string apiKey = Environment.GetEnvironmentVariable("HubSpotApiKey");
+            Constructor(apiKey);
         }
 
         public HubSpot(string apiKey)

@@ -1,14 +1,14 @@
-﻿using Newtonsoft.Json;
+﻿using HubSpotDotNet.Models;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace HubSpotDotNet.Contacts.Models
 {
-    public class CreateANewContactModel
+    public class ContactBaseModel : BaseModel
     {
         [JsonProperty(PropertyName = "properties")]
         public List<Property> Properties { get; set; }
     }
-
     public class Property
     {
         [JsonProperty(PropertyName = "property")]

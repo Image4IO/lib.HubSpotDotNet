@@ -12,6 +12,8 @@ namespace HubSpotDotNet.Test
         {
             string apiKey = File.ReadAllText("API.key");
             hs = new HubSpot(apiKey);
+            //System.Environment.SetEnvironmentVariable("HubSpotApiKey", apiKey);
+            //hs = new HubSpot();
         }
 
 

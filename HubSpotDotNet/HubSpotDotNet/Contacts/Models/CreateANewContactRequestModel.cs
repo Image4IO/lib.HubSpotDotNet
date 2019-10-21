@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace HubSpotDotNet.Contacts.Models
 {
-    public class CreateANewContactRequestModel
+    public class CreateANewContactRequestModel : ContactBaseModel
     {
         public CreateANewContactRequestModel()
         {
-            OtherProperties = new List<Property>();
+            Properties = new List<Property>();
         }
 
         public string Email { get; set; }
@@ -22,7 +22,6 @@ namespace HubSpotDotNet.Contacts.Models
         public string State { get; set; }
         public string Zip { get; set; }
         public LifecycleStage LifecycleStage { get; set; }
-        public List<Property> OtherProperties { get; set; }
 
         public List<Property> GetListOfProperties()
         {
@@ -51,7 +50,7 @@ namespace HubSpotDotNet.Contacts.Models
                 }
             }
 
-            return OtherProperties.Concat(temp).ToList();
+            return Properties.Concat(temp).ToList();
         }
     }
 

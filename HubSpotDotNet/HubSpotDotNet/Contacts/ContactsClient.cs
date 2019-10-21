@@ -21,7 +21,7 @@ namespace HubSpotDotNet.Contacts
         public async Task<bool> CreateANewContactAsync(CreateANewContactRequestModel model)
         {
 
-            string json = JsonConvert.SerializeObject(new CreateANewContactModel
+            string json = JsonConvert.SerializeObject(new ContactBaseModel
             {
                 Properties = model.GetListOfProperties()
             });
@@ -52,6 +52,36 @@ namespace HubSpotDotNet.Contacts
                     throw new Exception("Unkown Error");
                 }
             }
+        }
+
+        public bool CreateOrUpdateAContact(CreateOrUpdateAContactRequestModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> CreateOrUpdateAContactAsync(CreateOrUpdateAContactRequestModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool UpdateAnExistingContact(UpdateAnExistingContactRequestModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateAnExistingContactAsync(UpdateAnExistingContactRequestModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool UpdateAnExistingContactByEmail(UpdateAnExistingContactByEmailRequestModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateAnExistingContactByEmailAsync(UpdateAnExistingContactByEmailRequestModel model)
+        {
+            throw new NotImplementedException();
         }
     }
 }

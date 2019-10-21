@@ -23,13 +23,13 @@ namespace HubSpotDotNet.Test
                 FirstName = "Test"
             };
 
-            request.OtherProperties.Add(new Contacts.Models.Property
+            request.Properties.Add(new Contacts.Models.Property
             {
                 PropertyName = "hs_analytics_source",
                 Value = "OFFLINE"
             });
 
-            request.OtherProperties.Add(new Contacts.Models.Property
+            request.Properties.Add(new Contacts.Models.Property
             {
                 PropertyName = "reference",
                 Value = "Azure"
