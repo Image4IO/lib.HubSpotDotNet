@@ -1,9 +1,18 @@
 # HubSpotDotNet
 
+[![Nuget](https://img.shields.io/nuget/v/image4io.HubSpotDotNet.svg)](https://www.nuget.org/packages/image4io.HubSpotDotNet)
+![GitHub](https://img.shields.io/github/license/Image4IO/image4ioHubSpotDotNet.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/Image4IO/image4ioHubSpotDotNet.svg)
+
 ### License
 MailChimp.Net is licensed under the [MIT](https://github.com/Image4IO/image4ioDotNetSDK/blob/master/LICENSE) license.
 
 ### Quick Start
+
+Install the [NuGet package](https://www.nuget.org/packages/image4io.HubSpotDotNet/) from the package manager console:
+```powershell
+Install-Package image4io.HubSpotDotNet
+```
 
 Using it in code
 ```CSharp

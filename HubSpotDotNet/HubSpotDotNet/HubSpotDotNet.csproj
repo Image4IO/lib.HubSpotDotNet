@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Authors>image4io</Authors>
+    <Version>1.0.0</Version>
+    <PackageId>image4io.HubSpotDotNet</PackageId>
+    <Copyright>image4io</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://image4.io</PackageProjectUrl>
+    <PackageIconUrl>https://s.gravatar.com/avatar/0951b3b16c3110685ea364f8cab46113</PackageIconUrl>
+    <RepositoryUrl>https://github.com/Image4IO/lib.HubSpotDotNet</RepositoryUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
