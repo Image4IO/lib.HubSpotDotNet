@@ -26,7 +26,7 @@ Progress on implementations.
 - Calendar API [....................] %0
 - Companies API [....................] %0
 - Company Properties API [....................] %0
-- Contacts API [....................] %0
+- Contacts API [####................] %20
 - Contact Lists API [....................] %0
 - Contact Properties API [....................] %0
 - Conversations Live Chat Widget API [....................] %0
