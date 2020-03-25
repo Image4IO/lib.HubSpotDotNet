@@ -1,6 +1,7 @@
 ﻿using HubSpotDotNet.Contacts;
 using HubSpotDotNet.Forms;
 using HubSpotDotNet.Models;
+using HubSpotDotNet.TransactionalEmail;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace HubSpotDotNet
         protected static string APIKey;
         public IContactsClient Contacts;
         public IFormsClient Forms;
+        public ITransactionalEmailClient TransactionalEmail;
 
         public HubSpot()
         {
@@ -34,6 +36,7 @@ namespace HubSpotDotNet
 
             Contacts = new ContactsClient(client, apiKey);
             Forms = new FormsClient(client, apiKey);
+            TransactionalEmail = new TransactionalEmailClient(client, apiKey);
 
             client.BaseAddress = new Uri("https://api.hubapi.com");
         }

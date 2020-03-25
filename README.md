@@ -74,6 +74,6 @@ Progress on implementations.
 - Tickets API [____________________] %0
 - Timeline API [____________________] %0
 - Tracking Code API [____________________] %0
-- Transactional Email API [____________________] %0
+- Transactional Email API [#####_______________] %25
 - Workflows API [____________________] %0
 - Webhooks API [____________________] %0
