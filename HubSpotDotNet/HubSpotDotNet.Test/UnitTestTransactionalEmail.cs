@@ -22,8 +22,8 @@ namespace HubSpotDotNet.Test
                 EmailId= 85230578,
                 Message = new TransactionalEmail.Models.Message
                 {
-                    To="irensaltali@gmail.com",
-                    From="burak@image4.io"
+                    To="iren@saltali.com",
+                    From="iren@image4.io"
                 }
             };
 
