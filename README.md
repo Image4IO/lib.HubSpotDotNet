@@ -5,7 +5,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/Image4IO/image4ioHubSpotDotNet.svg)
 
 ### License
-MailChimp.Net is licensed under the [MIT](https://github.com/Image4IO/image4ioDotNetSDK/blob/master/LICENSE) license.
+HubSpotDotNet is licensed under the [MIT](https://github.com/Image4IO/image4ioDotNetSDK/blob/master/LICENSE) license.
 
 ### Quick Start
 
